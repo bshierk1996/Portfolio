@@ -5,7 +5,7 @@
     <section>
       
       <h1>Brent Shierk</h1>
-      <span>Full stack developer</span>
+      <span>Full Stack Developer</span>
       <button class="btn btn-xl btn-light" @click="scrollTo('find-more')">About me</button>
     </section>
   </article>    
@@ -34,21 +34,23 @@
         </div>
 
       </div>
-             <button class="btn btn-xl btn-dark" @click="scrollTo('recent-projects')">portfolio</button>
+             <button class="btn btn-xl btn-dark" @click="scrollTo('recent-projects')">Portfolio</button>
 
      </section>
    </article>
 
    <article class="second-image"> 
      <section>
-       <h2 class="port-head">portfolio</h2>
+       <h2 class="port-head">Portfolio</h2>
+       
        <!-- <button class="btn btn-xl btn-dark" @click="scrollTo('recent-projects')">recent projects</button> -->
      </section>
    </article>
 
    <article id="recent-projects" class="portfolio-section">
      <section class="container">
-       <h3>recent projects</h3>
+       <h3>Recent projects</h3>
+       <p>If you'd like a link to code used in a clients project please reach out to me via email  </p>
        <div class="row no-gutters">
        <div class="col-lg-6" v-for="(project, index) in recentProjects" :key="index">
          <h5>{{project.title}}</h5>
@@ -71,15 +73,29 @@
      </section>
    </article>
 
-   
+   <article id="offers" class="blue-section">
+     <section class="container">
+       <h2>Social Media/<br>Contact</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-3 mb-5 mb-lg-0" v-for="(item, index) in socialMedia" :key="index">
+          <a :href="item.route">
+          <div class="icon mx-auto"><i class="fas" :class="item.icon">
+            <b-icon :icon="item.icon"></b-icon>
+            </i></div>
+            </a>
+           <h4>{{item.title}}</h4>
+           
+          <!-- <span>{{offer.description}}</span> --> 
+        </div>
 
-     
-   <footer>
-     <h1>contact me</h1>
-     <img src="../assets/github.png" alt="" >
-     <img src="../assets/linkedin.png" alt="">
-   </footer>
-  </div>
+      </div>
+
+     </section>
+   </article>
+
+   </div>
+
+   
   
 </template>
 
@@ -143,11 +159,23 @@ export default {
       ],
       socialMedia:[
         {
-          link:'../assets/linkedin.png'
+          
+          icon:'people',
+          route:'linkedin.com/in/brent-shierk-655b1814a/',
+          title:"LinkedIn"
         },
         {
-          link:'../assets/github.png'
+          
+          icon:'terminal',
+          route:'https://github.com/bshierk1996',
+          title:"Github"
+        },
+        {
+          icon:'envelope',
+          route:'mailto:Brents.dev@gmail.com',
+          title:'Email'
         }
+        
       ]
     }
   },
@@ -304,4 +332,20 @@ footer{
   background-color: #1d809f;
   color: black
 }
+.contact-icon{
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  color: #1d809f;
+  border-radius: 50%;
+  
+
+}
+ .contact-sec{
+   margin-left: 300px;
+   margin-right: 0px;
+ }
 </style>
