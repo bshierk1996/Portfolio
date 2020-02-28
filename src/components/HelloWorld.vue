@@ -6,7 +6,7 @@
       
       <h1>Brent Shierk</h1>
       <span>Full Stack Developer</span>
-      <button class="btn btn-xl btn-light" @click="scrollTo('find-more')">About me</button>
+      <button class="btn btn-xl btn-light" @click="scrollTo('find-more')">About Me</button>
     </section>
   </article>    
    
@@ -15,7 +15,7 @@
        <h3>
         About Me
        </h3>
-       <span>Since beginning my journey as a Software developer 2 years ago, I've done remote work for agencies, created digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my abilities one problem at a time
+       <span>Since beginning my journey as a Software developer 2 years ago. I've done remote work for agencies, created digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my abilities one problem at a time.
 </span>
        <button class="btn btn-xl btn-dark" @click="scrollTo('offers')">My Skill</button>
      </section>
@@ -49,7 +49,7 @@
 
    <article id="recent-projects" class="portfolio-section">
      <section class="container">
-       <h3>Recent projects</h3>
+       <h3>Recent Projects</h3>
        <p>If you'd like a link to code used in a clients project please reach out to me via email  </p>
        <div class="row no-gutters">
        <div class="col-lg-6" v-for="(project, index) in recentProjects" :key="index">
@@ -75,7 +75,7 @@
 
    <article id="offers" class="blue-section">
      <section class="container">
-       <h2>Social Media/<br>Contact</h2>
+       <h2>Contact</h2>
       <div class="row">
         <div class="col-lg-4 col-md-3 mb-5 mb-lg-0" v-for="(item, index) in socialMedia" :key="index">
           <a :href="item.route">
@@ -112,29 +112,29 @@ export default {
       offers: [
         {
           icon: 'phone',
-          title: 'Responsive design',
+          title: 'Responsive Design',
           description: 'Expierence building reactive web applications using component based libaries like Vue and React'
         },
         {
           icon: 'cloud-upload',
-          title: 'Cloud usage',
+          title: 'Cloud Usage',
           description: 'Using cloud based software for for api endpoint conectivity '
         },
         {
           icon: 'terminal',
           title: 'Development',
-          description: 'fullstack web development expierence using Javascrippt, Ruby on rails and Python '
+          description: 'Fullstack web development expierence using Javascrippt, Ruby on rails and Python '
         },
         {
           icon: 'archive',
-          title: 'Database managment',
-          description: 'working with and creating sql and nosql databases'
+          title: 'Database Managment',
+          description: 'Working with and creating sql and nosql databases'
         }
       ],
       recentProjects:[
         {
           img: 'igm1.png',
-          title:'Keisha Villerson fitness App',
+          title:'Keisha Villerson Fitness App',
           description:'built a fullstack web app',
           link: 'https://github.com/bshierk1996/pt2'
         },
@@ -146,13 +146,13 @@ export default {
         },
         {
           img: 'NYT.png',
-          title:'NYT webscraper',
-          description:'NYT web scraper',
+          title:'NYT Web Scraper',
+          description:'NYT Web Scraper',
           link:'https://github.com/bshierk1996/homework-newyorktimes/tree/master/newyorktimes'
         },
         {
           img: 'friend.png',
-          title:'friend finder app',
+          title:'Friend Finder App',
           link:'https://github.com/bshierk1996/friend/tree/master/friendFinder-master',
           description:'friend finder'
         },
